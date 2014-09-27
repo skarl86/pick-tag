@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IntroViewController.h"
 
 @implementation AppDelegate
 
@@ -20,6 +21,23 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    // 메인 화면을 들어가기 전에
+    // 로그인 화면을 띄우기 위한 사전 작업.
+    
+    // 메인 화면을 먼저 읽고.
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName: @"Main2" bundle: [NSBundle mainBundle]];
+    UIViewController* vc = [storyboard instantiateInitialViewController];
+    self.window.rootViewController = vc;
+    
+    // 로그인 화면을 그 위에 Modal ViewController 형태로 띄워준다.
+    UIStoryboard* introStory = [UIStoryboard storyboardWithName:@"IntroStoryboard" bundle:nil];
+    
+    IntroViewController * intro = [introStory instantiateViewControllerWithIdentifier:@"Intro"];
+    intro.parentVC = vc;
+    
+    [self.window.rootViewController presentViewController:intro animated:NO completion:nil];
+    
     return YES;
 }
 
@@ -146,4 +164,10 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma makr -
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation <= UIInterfaceOrientationPortrait);
+}
 @end

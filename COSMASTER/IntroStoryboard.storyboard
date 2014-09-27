@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VFc-Jn-aKj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NanumGothic.ttc">
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothic</string>
+            <string>NanumGothic</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="8gJ-fN-fcZ">
+            <objects>
+                <viewController storyboardIdentifier="Intro" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VFc-Jn-aKj" customClass="IntroViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u12-bn-mhR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wzu-yy-yxg"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ODE-gc-GeU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBT-44-0yw">
+                                <rect key="frame" x="-1" y="1" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PICK-TAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-jI-QHl">
+                                        <rect key="frame" x="20" y="88" width="280" height="100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="43"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="예:cosmaster@naver.com" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fxx-YR-PLQ">
+                                        <rect key="frame" x="88" y="246" width="212" height="30"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VFc-Jn-aKj" id="Nft-Qt-9HG"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="암호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VJ-X0-rQl">
+                                        <rect key="frame" x="20" y="296" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="암호가 필요합니다." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bo1-FK-Hw7">
+                                        <rect key="frame" x="88" y="292" width="212" height="30"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VFc-Jn-aKj" id="FtG-sL-HLw"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcF-lt-ds2">
+                                        <rect key="frame" x="182" y="383" width="105" height="59"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="15"/>
+                                        <state key="normal" title="접속">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginUser:" destination="VFc-Jn-aKj" eventType="touchUpInside" id="bov-as-G2U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d58-EY-4Ma">
+                                        <rect key="frame" x="42" y="383" width="105" height="59"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="15"/>
+                                        <state key="normal" title="회원가입">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="joinUser:" destination="VFc-Jn-aKj" eventType="touchUpInside" id="q5m-sd-8ww"/>
+                                            <segue destination="Lhd-aT-MAf" kind="modal" id="WRF-1Y-Nbn"/>
+                                        </connections>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CgY-dm-CSO">
+                                        <rect key="frame" x="210" y="334" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 저장" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHG-yc-cFG">
+                                        <rect key="frame" x="125" y="339" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="13"/>
+                                        <color key="textColor" red="0.64837381114130432" green="0.64837381114130432" blue="0.64837381114130432" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;취향대로 고르자.&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx3-mu-I8L">
+                                        <rect key="frame" x="30" y="167" width="260" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicBold" family="Nanum Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.42977241847826086" green="0.42977241847826086" blue="0.42977241847826086" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxb-Xg-PXr">
+                                        <rect key="frame" x="20" y="250" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="fxx-YR-PLQ" id="2df-Ir-g2f"/>
+                        <outlet property="joinButton" destination="d58-EY-4Ma" id="fym-Ze-btH"/>
+                        <outlet property="loginButton" destination="VcF-lt-ds2" id="RJy-1W-ALf"/>
+                        <outlet property="passwdTextField" destination="Bo1-FK-Hw7" id="iFJ-6u-Ilp"/>
+                        <outlet property="saveEmailSwitch" destination="CgY-dm-CSO" id="j1q-kO-iMD"/>
+                        <outlet property="scrollView" destination="eBT-44-0yw" id="amm-NJ-dIb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eup-cS-pfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2159" y="-557"/>
+        </scene>
+        <!--Join Us-->
+        <scene sceneID="XRL-Xf-5OM">
+            <objects>
+                <navigationController title="Join Us" definesPresentationContext="YES" id="Lhd-aT-MAf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wGQ-3T-uo4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Cq-6J-3BP" kind="relationship" relationship="rootViewController" id="2g8-C4-1eP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Oo-ja-cKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1559" y="-508"/>
+        </scene>
+        <!--회원가입-->
+        <scene sceneID="lCH-LI-PB1">
+            <objects>
+                <viewController storyboardIdentifier="JoinUser" id="1Cq-6J-3BP" customClass="JoinUserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sH4-5V-HBg"/>
+                        <viewControllerLayoutGuide type="bottom" id="r7G-nj-tL7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="evb-ZX-xox">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppI-a2-HGj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="강력한 암호를 사용해주세요" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="n7h-Qb-eBf">
+                                        <rect key="frame" x="114" y="79" width="186" height="30"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VFc-Jn-aKj" id="HDe-e0-gPy"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-uk-VpA">
+                                        <rect key="frame" x="20" y="33" width="69" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="예:)picktag@picktag.com" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="P6j-SX-Hvd">
+                                        <rect key="frame" x="114" y="29" width="186" height="30"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VFc-Jn-aKj" id="JJr-hg-YXU"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDL-w8-WuU">
+                                        <rect key="frame" x="20" y="83" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="1JN-Ag-Mx7">
+                                        <rect key="frame" x="114" y="131" width="186" height="30"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VFc-Jn-aKj" id="5fz-gf-J7P"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 확인" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZk-iH-uRB">
+                                        <rect key="frame" x="20" y="135" width="101" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="Nanum Gothic" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaP-El-YA5">
+                                        <rect key="frame" x="114" y="57" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-fd-pIZ">
+                                        <rect key="frame" x="114" y="163" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" name="NanumGothic" family="Nanum Gothic" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="회원가입" id="KDe-ch-aCJ">
+                        <barButtonItem key="leftBarButtonItem" title="가입" id="fKu-98-186">
+                            <connections>
+                                <action selector="join:" destination="1Cq-6J-3BP" id="IHz-xU-Akb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="취소" id="gbP-Gd-3rW">
+                            <connections>
+                                <action selector="close:" destination="1Cq-6J-3BP" id="tzp-Xu-xa4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="emilTextField" destination="P6j-SX-Hvd" id="WBO-mF-toZ"/>
+                        <outlet property="passwdTextField" destination="n7h-Qb-eBf" id="c6f-WV-NcO"/>
+                        <outlet property="rePasswdTextfield" destination="1JN-Ag-Mx7" id="Hfy-x2-bey"/>
+                        <outlet property="warningEmailLabel" destination="LaP-El-YA5" id="PLc-5U-hxz"/>
+                        <outlet property="warningRepwLabel" destination="cKb-fd-pIZ" id="U8M-Li-kB0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXN-lB-toW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1040" y="-490"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

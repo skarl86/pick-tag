@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+// Core Data 관련 Property
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
