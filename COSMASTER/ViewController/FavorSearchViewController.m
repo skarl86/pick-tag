@@ -24,6 +24,7 @@
 
 #import "NSString+Width.h"
 #import "UIColor+Default.h"
+#import "UILabel+PICK-TAG.h"
 
 #import "PlaceImageDownloader.h"
 
@@ -38,6 +39,7 @@
 @property (strong, nonatomic) NSArray * categoryList;
 @property (strong, nonatomic) NSMutableArray * favorPlaceList;
 @property (strong, nonatomic) NSMutableDictionary * scoreInfo;
+
 
 @property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 
@@ -61,12 +63,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    FullLoadingViewController *vc = [FullLoadingViewController new];
-//    vc.delegate = self;
-//    NSString *url = [[NSString stringWithFormat:@"http://203.253.23.38:8080/COSMASTER/category.jsp?category=%@&tag=%@",@"음식점",@"1"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    NSLog(@"%@",url);
-//    [vc startLoadingWithURL:url taskName:@"" Target:self];
     UILabel *label = [[UILabel alloc] init];
     [label setTextColor:[UIColor lightGrayColor]];
     [label setFont:[UIFont fontWithName:@"NanumGothic" size:15.0f]];
@@ -82,13 +78,8 @@
     self.scoreInfo = [NSMutableDictionary new];
     self.imageDownloadsInProgress = [NSMutableDictionary dictionary];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
-    titleLabel.font = [UIFont fontWithName:@"NanumGothicBold" size:16];
-    titleLabel.textColor = [UIColor defaultIOSColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.text = @"선호 검색";
+    self.navigationItem.titleView = [UILabel navigationBarTitle:@"맞춤 검색"];
     
-    self.navigationItem.titleView = titleLabel;
     self.tableView.separatorColor = [UIColor clearColor];
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                        [UIFont fontWithName:@"NanumGothic" size:16], NSFontAttributeName,
@@ -96,7 +87,8 @@
                                        nil]
                              forState:UIControlStateNormal];
     AppDelegate *ap = [[UIApplication sharedApplication] delegate];
-    self.categoryList = [CoreDataManager entitiesWithName:@"FavorCategory" inManagedContext:ap.managedObjectContext];
+    
+    self.categoryList = [CoreDataManager entitiesWithName:@"FavorCategory" sortKey:@"totalCount" inManagedContext:ap.managedObjectContext];
 
     [self _calcurateCategoryCountForCell:self.categoryList];
 }
@@ -111,7 +103,6 @@
     
     [self.imageDownloadsInProgress removeAllObjects];
 }
-
 
 #pragma mark - Navigation
 
@@ -154,7 +145,7 @@
     FullLoadingViewController *vc = [FullLoadingViewController new];
     vc.delegate = self;
     
-    NSString *url = [NSString stringWithFormat:@"http://203.253.23.38:8080/COSMASTER/favolList.jsp?id=%@",param];
+    NSString *url = [NSString stringWithFormat:@"http://203.253.23.38:8080/COSMASTER/favorList2.jsp?id=%@",param];
     NSString *encodeUrl = [url stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [vc startLoadingWithURL:encodeUrl taskName:@"" Target:self];
 }
@@ -169,9 +160,9 @@
         width += [NSString sizeWithString:category.word andFont:font].width;
         if(width >= 160){
             width = 0;
+            [tempList addObject:category];
             [cellForWordList addObject:tempList];
             tempList = [NSMutableArray new];
-            [tempList addObject:category];
         }else{
             [tempList addObject:category];
         }
@@ -224,16 +215,15 @@
     NSMutableArray *json = [NSJSONSerialization
                                          JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
-    NSMutableDictionary *resultDic = [json objectAtIndex:0];
+    NSMutableArray *resultList = [json objectAtIndex:0];
     
 //    double blogParsingPerPlaceAvg = [[resultDic objectForKey:@"blog_parsing_per_place_avg"] doubleValue];
 //    int placeBlogCount = 0;
     
-    NSMutableArray *list = [resultDic objectForKey:@"resultList"];
     NSMutableDictionary *placeDic = [NSMutableDictionary new];
     
-    for(NSDictionary * obj in list){
-        double score = [[obj objectForKey:@"score"] doubleValue];
+    for(NSDictionary * obj in resultList){
+        double score = [[obj objectForKey:@"count"] doubleValue];
 //        placeBlogCount = [[obj objectForKey:@"place_blog_count"] intValue];
         // 가중치 적용하여 점수를 계산.
         // 블로그의 갯수가 적은 것은 점수가 높아지고 블로그의 갯수가 많은 것은 점수가 평균값을 찾아가기 때문에.
@@ -376,7 +366,7 @@
         theCell.placeNameLabel.text = place.name;
         theCell.placeLocationLabel.text = place.local;
         double score = [[self.scoreInfo objectForKey:place.name] doubleValue];
-        score *= 100;
+//        score *= 100;
         theCell.scoreLabel.text = [NSString stringWithFormat:@"%d",(int)score];
         
         if (!place.image)

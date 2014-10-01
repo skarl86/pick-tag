@@ -4,6 +4,7 @@
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="characterID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Member" representedClassName="Member" syncable="YES">
@@ -40,7 +41,7 @@
         <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FavorCategory" positionX="-279" positionY="54" width="128" height="103"/>
+        <element name="FavorCategory" positionX="-279" positionY="54" width="128" height="120"/>
         <element name="Member" positionX="-279" positionY="54" width="128" height="103"/>
         <element name="PlaceImage" positionX="-486" positionY="23" width="128" height="118"/>
         <element name="PlaceInfo" positionX="-63" positionY="-18" width="128" height="225"/>

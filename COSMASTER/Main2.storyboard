@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="L2d-Er-Rpd">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,14 +13,14 @@
             <string>NanumGothic</string>
             <string>NanumGothic</string>
             <string>NanumGothic</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
-            <string>NanumGothicExtraBold</string>
             <string>NanumGothic</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
+            <string>NanumGothicExtraBold</string>
             <string>NanumGothic</string>
         </mutableArray>
     </customFonts>
@@ -38,7 +38,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dct-LI-fQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="58"/>
+            <point key="canvasLocation" x="-727" y="874"/>
         </scene>
         <!--선호검색-->
         <scene sceneID="KjG-2C-8NV">
@@ -70,10 +70,6 @@
                                     <outlet property="delegate" destination="vsz-Ro-q6K" id="DPa-Rh-Gdk"/>
                                 </connections>
                             </tableView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-PU-rIV" customClass="CategoryScrollView">
-                                <rect key="frame" x="0.0" y="234" width="320" height="78"/>
-                                <color key="backgroundColor" red="0.87086022418478259" green="0.87086022418478259" blue="0.87086022418478259" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="FavorResultTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-6H-74D">
                                 <rect key="frame" x="0.0" y="312" width="320" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,6 +117,10 @@
                                     <outlet property="delegate" destination="vsz-Ro-q6K" id="MNs-1d-2U4"/>
                                 </connections>
                             </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-PU-rIV" customClass="CategoryScrollView">
+                                <rect key="frame" x="0.0" y="232" width="320" height="78"/>
+                                <color key="backgroundColor" red="0.87086022418478259" green="0.87086022418478259" blue="0.87086022418478259" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQc-rk-70Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="58"/>
+            <point key="canvasLocation" x="937" y="458"/>
         </scene>
         <!--Place Detail View Controller-->
         <scene sceneID="qVh-3z-wLa">
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6X-2C-gYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1407" y="583"/>
+            <point key="canvasLocation" x="943" y="1367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VCH-NK-s5A">
@@ -247,7 +247,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT1-8z-706" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="1342"/>
+            <point key="canvasLocation" x="1479" y="1367"/>
         </scene>
         <!--Place Map View Controller-->
         <scene sceneID="Wuj-0a-5oX">
@@ -285,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYG-0B-YrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="1342"/>
+            <point key="canvasLocation" x="2093" y="1367"/>
         </scene>
         <!--User Select Category View Controller-->
         <scene sceneID="tT3-wf-iJ9">
@@ -362,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYA-eL-6bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="576"/>
+            <point key="canvasLocation" x="937" y="2184"/>
         </scene>
         <!--목록-->
         <scene sceneID="D62-CH-MMV">
@@ -372,7 +372,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="상호명을 입력하세요." id="XY7-LT-FrK">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="상호명 또는 지역을 입력하세요." placeholder="상호명을 입력하세요." id="XY7-LT-FrK">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -438,7 +438,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="457" y="633"/>
+            <point key="canvasLocation" x="17" y="857"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -447,6 +447,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PfJ-C3-7Gk"/>
+        <segue reference="flh-Oj-StN"/>
     </inferredMetricsTieBreakers>
 </document>

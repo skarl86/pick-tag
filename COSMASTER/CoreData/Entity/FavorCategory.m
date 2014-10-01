@@ -15,5 +15,6 @@
 @dynamic characterID;
 @dynamic category;
 @dynamic tag;
+@dynamic totalCount;
 
 @end

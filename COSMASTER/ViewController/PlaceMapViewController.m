@@ -9,9 +9,12 @@
 #import "PlaceMapViewController.h"
 
 #import "UIColor+Default.h"
+#import "UILabel+PICK-TAG.h"
+
 #import <MapKit/MapKit.h>
 #import <MapKit/MKUserLocation.h>
 #import <CoreLocation/CLLocation.h>
+
 #import "PlaceInfo.h"
 
 #define kMeterPerMile 0.001f
@@ -25,13 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
-    titleLabel.font = [UIFont fontWithName:@"NanumGothicBold" size:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor defaultIOSColor];
-    titleLabel.text = self.selectedPlace.name;
-    
-    self.navigationItem.titleView = titleLabel;
+    self.navigationItem.titleView = [UILabel navigationBarTitle:self.selectedPlace.name];
     
     UIBarButtonItem *myBtnItem = self.navigationItem.leftBarButtonItem;
     NSDictionary *attributeDic = [NSDictionary dictionaryWithObjectsAndKeys:

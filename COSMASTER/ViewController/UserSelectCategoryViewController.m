@@ -14,6 +14,7 @@
 
 #import "NSString+Width.h"
 #import "UIColor+Default.h"
+#import "UILabel+PICK-TAG.h"
 
 #import "CategoryTableViewCell.h"
 #import "PlaceInfo.h"
@@ -33,13 +34,7 @@
 
     self.selectedWordListForCell = [NSMutableArray new];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
-    titleLabel.font = [UIFont fontWithName:@"NanumGothicBold" size:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor defaultIOSColor];
-    titleLabel.text = self.selectedPlace.name;
-    
-    self.navigationItem.titleView = titleLabel;
+    self.navigationItem.titleView = [UILabel navigationBarTitle:self.selectedPlace.name];
     
     NSDictionary *attributeDic = [NSDictionary dictionaryWithObjectsAndKeys:
                                   [UIFont fontWithName:@"NanumGothic" size:16], NSFontAttributeName,

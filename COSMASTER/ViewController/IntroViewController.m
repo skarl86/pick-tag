@@ -147,7 +147,7 @@
                                             inManagedContext:apDelegate.managedObjectContext]){
                     FullLoadingViewController *vc = [FullLoadingViewController new];
                     vc.delegate = self;
-                    NSString *urlString = @"http://203.253.23.38:8080/COSMASTER/loadData.jsp";
+                    NSString *urlString = @"http://203.253.23.38:8080/COSMASTER/loadData2.jsp";
                     [vc startLoadingWithURL:urlString taskName:kTaskNameLoadData Target:self];
                 }else{
                     [self dismissViewControllerAnimated:YES completion:^{

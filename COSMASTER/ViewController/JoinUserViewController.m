@@ -10,6 +10,7 @@
 #import "FullLoadingViewController.h"
 
 #import "NSString+Encrypt.h"
+#import "UILabel+PICK-TAG.h"
 
 #define kSecuryKey  @"TFD"
 
@@ -32,12 +33,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
-    titleLabel.font = [UIFont fontWithName:@"NanumGothicBold" size:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-    titleLabel.text = @"회원가입";
-    self.navigationItem.titleView = titleLabel;
+    self.navigationItem.titleView = [UILabel navigationBarTitle:@"회원가입"];
+    
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                           [UIFont fontWithName:@"NanumGothic" size:16], NSFontAttributeName,
                                                           [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0], NSForegroundColorAttributeName,

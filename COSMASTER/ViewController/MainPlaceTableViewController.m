@@ -18,6 +18,7 @@
 #import "PlaceImageDownloader.h"
 
 #import "UIColor+Default.h"
+#import "UILabel+PICK-TAG.h"
 
 // CoreData Entity
 #import "PlaceInfo.h"
@@ -55,13 +56,7 @@
     self.imageDownloadsInProgress = [NSMutableDictionary dictionary];
     self.searchResults = [NSArray new];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
-    titleLabel.font = [UIFont fontWithName:@"NanumGothicBold" size:16];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor defaultIOSColor];
-    titleLabel.text = @"목록";
-    
-    self.navigationItem.titleView = titleLabel;
+    self.navigationItem.titleView = [UILabel navigationBarTitle:@"목록"];
     
     UIBarButtonItem *myBtnItem = self.navigationItem.leftBarButtonItem;
     NSDictionary *attributeDic = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -215,7 +210,7 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
-    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@ or local contains[c] %@", searchText, searchText];
     self.searchResults = [self.placeList filteredArrayUsingPredicate:resultPredicate];
 }
 

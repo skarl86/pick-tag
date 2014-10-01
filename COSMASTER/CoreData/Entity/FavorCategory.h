@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NSNumber * characterID;
 @property (nonatomic, retain) NSString * category;
 @property (nonatomic, retain) NSString * tag;
+@property (nonatomic, retain) NSNumber * totalCount;
 
 @end

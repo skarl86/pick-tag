@@ -43,6 +43,7 @@
 		0D756CEB19ADB024000E80E8 /* RecipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D756CEA19ADB024000E80E8 /* RecipeTableCell.m */; };
 		0D756D0019ADB1DF000E80E8 /* COSMASTER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D756CFE19ADB1DF000E80E8 /* COSMASTER.xcdatamodeld */; };
 		0D756E0319ADC06F000E80E8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D756E0219ADC06F000E80E8 /* CoreDataManager.m */; };
+		0D96315519DBABD800BFF13B /* UILabel+PICK-TAG.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D96315419DBABD800BFF13B /* UILabel+PICK-TAG.m */; };
 		0DAA2F8919D5671D004CFA28 /* food2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DAA2F8819D5671D004CFA28 /* food2.jpg */; };
 		0DE1C5D719A4A1EF002F0F7F /* IntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1C5D619A4A1EF002F0F7F /* IntroCell.m */; };
 		0DE1C5DC19A4AD76002F0F7F /* MainPlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1C5DB19A4AD76002F0F7F /* MainPlaceTableViewCell.m */; };
@@ -139,6 +140,8 @@
 		0D756CFF19ADB1DF000E80E8 /* COSMASTER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = COSMASTER.xcdatamodel; sourceTree = "<group>"; };
 		0D756E0119ADC06F000E80E8 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		0D756E0219ADC06F000E80E8 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		0D96315319DBABD800BFF13B /* UILabel+PICK-TAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+PICK-TAG.h"; sourceTree = "<group>"; };
+		0D96315419DBABD800BFF13B /* UILabel+PICK-TAG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+PICK-TAG.m"; sourceTree = "<group>"; };
 		0DAA2F8819D5671D004CFA28 /* food2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food2.jpg; sourceTree = "<group>"; };
 		0DE1C5D519A4A1EF002F0F7F /* IntroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroCell.h; sourceTree = "<group>"; };
 		0DE1C5D619A4A1EF002F0F7F /* IntroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroCell.m; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				0DF121EB19D2F34600F21C00 /* UIColor+Default.m */,
 				0D4F69BF19D76227006C4AC5 /* UIButton+PICK-TAG.h */,
 				0D4F69C019D76227006C4AC5 /* UIButton+PICK-TAG.m */,
+				0D96315319DBABD800BFF13B /* UILabel+PICK-TAG.h */,
+				0D96315419DBABD800BFF13B /* UILabel+PICK-TAG.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -550,6 +555,7 @@
 			files = (
 				0D756CEB19ADB024000E80E8 /* RecipeTableCell.m in Sources */,
 				0D596CBF19C9512A0018DC73 /* FavorSearchViewController.m in Sources */,
+				0D96315519DBABD800BFF13B /* UILabel+PICK-TAG.m in Sources */,
 				0D06BCFA19B95C3200E8E763 /* LazyImage.m in Sources */,
 				0DF84EF119C6BFF100423040 /* JoinUserViewController.m in Sources */,
 				0D596CAE19C810CF0018DC73 /* NSDataAdditions.m in Sources */,

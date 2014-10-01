@@ -15,9 +15,9 @@
 
 #import "AppDelegate.h"
 
-#define kPlaceListKey @"placeList"
-#define kImageListKey @"imageList"
-#define kFavorCategoryListKey @"categoryList"
+#define kPlaceListKey @"place_list"
+#define kImageListKey @"image_list"
+#define kFavorCategoryListKey @"category_list"
 
 @implementation CoreDataManager
 #pragma -
@@ -69,7 +69,7 @@
     NSSortDescriptor *sortDescriptor = nil;
     if(sortKey){
         sortDescriptor = [[NSSortDescriptor alloc]
-                          initWithKey:@"score"
+                          initWithKey:sortKey
                           ascending:NO];
         NSArray *descriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
         [fetchRequest setSortDescriptors:descriptors];
@@ -215,6 +215,7 @@
         category.characterID =[NSNumber numberWithInt:[[categoryInfo objectForKey:@"id"] intValue]];
         category.category = [categoryInfo objectForKey:@"category"];
         category.tag = [categoryInfo objectForKey:@"tag"];
+        category.totalCount = [NSNumber numberWithInt:[[categoryInfo objectForKey:@"total_count"] integerValue]];
     }
 }
 +(NSInteger)categoryIDForWord:(NSString *)word inManagedContext:(NSManagedObjectContext *)context{
