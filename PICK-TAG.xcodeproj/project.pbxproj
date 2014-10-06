@@ -40,12 +40,11 @@
 		0D6E8B1819D4591100E9B695 /* cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6E8B1619D4591100E9B695 /* cafe.png */; };
 		0D6E8B1919D4591100E9B695 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6E8B1719D4591100E9B695 /* food.png */; };
 		0D6E8B1B19D45BC200E9B695 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D6E8B1A19D45BC200E9B695 /* Icon.png */; };
-		0D756CEB19ADB024000E80E8 /* RecipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D756CEA19ADB024000E80E8 /* RecipeTableCell.m */; };
 		0D756D0019ADB1DF000E80E8 /* COSMASTER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D756CFE19ADB1DF000E80E8 /* COSMASTER.xcdatamodeld */; };
 		0D756E0319ADC06F000E80E8 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D756E0219ADC06F000E80E8 /* CoreDataManager.m */; };
 		0D96315519DBABD800BFF13B /* UILabel+PICK-TAG.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D96315419DBABD800BFF13B /* UILabel+PICK-TAG.m */; };
+		0D96315819DBD72200BFF13B /* CategoryInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D96315719DBD72200BFF13B /* CategoryInfoView.m */; };
 		0DAA2F8919D5671D004CFA28 /* food2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DAA2F8819D5671D004CFA28 /* food2.jpg */; };
-		0DE1C5D719A4A1EF002F0F7F /* IntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1C5D619A4A1EF002F0F7F /* IntroCell.m */; };
 		0DE1C5DC19A4AD76002F0F7F /* MainPlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1C5DB19A4AD76002F0F7F /* MainPlaceTableViewCell.m */; };
 		0DE1C5DF19A4AE13002F0F7F /* MainPlaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE1C5DE19A4AE13002F0F7F /* MainPlaceTableViewController.m */; };
 		0DE8B9BA19D48B4400B2D6E4 /* PlaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8B9B919D48B4400B2D6E4 /* PlaceDetailViewController.m */; };
@@ -135,16 +134,14 @@
 		0D6E8B1619D4591100E9B695 /* cafe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe.png; sourceTree = "<group>"; };
 		0D6E8B1719D4591100E9B695 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		0D6E8B1A19D45BC200E9B695 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		0D756CE919ADB024000E80E8 /* RecipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableCell.h; sourceTree = "<group>"; };
-		0D756CEA19ADB024000E80E8 /* RecipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableCell.m; sourceTree = "<group>"; };
 		0D756CFF19ADB1DF000E80E8 /* COSMASTER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = COSMASTER.xcdatamodel; sourceTree = "<group>"; };
 		0D756E0119ADC06F000E80E8 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		0D756E0219ADC06F000E80E8 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		0D96315319DBABD800BFF13B /* UILabel+PICK-TAG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+PICK-TAG.h"; sourceTree = "<group>"; };
 		0D96315419DBABD800BFF13B /* UILabel+PICK-TAG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+PICK-TAG.m"; sourceTree = "<group>"; };
+		0D96315619DBD72200BFF13B /* CategoryInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryInfoView.h; sourceTree = "<group>"; };
+		0D96315719DBD72200BFF13B /* CategoryInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryInfoView.m; sourceTree = "<group>"; };
 		0DAA2F8819D5671D004CFA28 /* food2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food2.jpg; sourceTree = "<group>"; };
-		0DE1C5D519A4A1EF002F0F7F /* IntroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroCell.h; sourceTree = "<group>"; };
-		0DE1C5D619A4A1EF002F0F7F /* IntroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroCell.m; sourceTree = "<group>"; };
 		0DE1C5DA19A4AD76002F0F7F /* MainPlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPlaceTableViewCell.h; sourceTree = "<group>"; };
 		0DE1C5DB19A4AD76002F0F7F /* MainPlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPlaceTableViewCell.m; sourceTree = "<group>"; };
 		0DE1C5DD19A4AE13002F0F7F /* MainPlaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPlaceTableViewController.h; sourceTree = "<group>"; };
@@ -257,6 +254,8 @@
 				0D06BD0319B981BF00E8E763 /* PlaceImageScrollView.m */,
 				0D596CCA19CBEE880018DC73 /* CategoryScrollView.h */,
 				0D596CCB19CBEE880018DC73 /* CategoryScrollView.m */,
+				0D96315619DBD72200BFF13B /* CategoryInfoView.h */,
+				0D96315719DBD72200BFF13B /* CategoryInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,10 +410,6 @@
 		0DF0674119A4698C006B90B4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0D756CE919ADB024000E80E8 /* RecipeTableCell.h */,
-				0D756CEA19ADB024000E80E8 /* RecipeTableCell.m */,
-				0DE1C5D519A4A1EF002F0F7F /* IntroCell.h */,
-				0DE1C5D619A4A1EF002F0F7F /* IntroCell.m */,
 				0DE1C5DA19A4AD76002F0F7F /* MainPlaceTableViewCell.h */,
 				0DE1C5DB19A4AD76002F0F7F /* MainPlaceTableViewCell.m */,
 				0D596CC019CACA170018DC73 /* CategoryTableViewCell.h */,
@@ -553,7 +548,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D756CEB19ADB024000E80E8 /* RecipeTableCell.m in Sources */,
 				0D596CBF19C9512A0018DC73 /* FavorSearchViewController.m in Sources */,
 				0D96315519DBABD800BFF13B /* UILabel+PICK-TAG.m in Sources */,
 				0D06BCFA19B95C3200E8E763 /* LazyImage.m in Sources */,
@@ -568,6 +562,7 @@
 				0D06BCED19B9537F00E8E763 /* LazyDownload.m in Sources */,
 				0D080B1319D296DF004A5190 /* FavorCategory.m in Sources */,
 				0D596CC219CACA170018DC73 /* CategoryTableViewCell.m in Sources */,
+				0D96315819DBD72200BFF13B /* CategoryInfoView.m in Sources */,
 				0D06BD2319B9CFD200E8E763 /* PlaceInfo.m in Sources */,
 				0DF84EF519C6C5D200423040 /* FullLoadingViewController.m in Sources */,
 				0DE8B9BA19D48B4400B2D6E4 /* PlaceDetailViewController.m in Sources */,
@@ -588,7 +583,6 @@
 				0D6D11B819D72E080086F0A0 /* UserChoiceCategory.m in Sources */,
 				0D596CAF19C810CF0018DC73 /* NSString+Encrypt.m in Sources */,
 				0D0DFC2A19D36F12005ACA75 /* FavorResultTableViewCell.m in Sources */,
-				0DE1C5D719A4A1EF002F0F7F /* IntroCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -372,7 +372,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="상호명 또는 지역을 입력하세요." placeholder="상호명을 입력하세요." id="XY7-LT-FrK">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="상호명 또는 지역을 입력하세요." id="XY7-LT-FrK">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -447,6 +447,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="flh-Oj-StN"/>
+        <segue reference="PfJ-C3-7Gk"/>
     </inferredMetricsTieBreakers>
 </document>

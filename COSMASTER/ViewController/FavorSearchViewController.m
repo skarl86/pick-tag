@@ -14,6 +14,7 @@
 #import "FavorResultTableViewCell.h"
 #import "PlaceDetailViewController.h"
 #import "CategoryScrollView.h"
+#import "CategoryInfoView.h"
 
 #import "AppDelegate.h"
 #import "CoreDataManager.h"
@@ -303,6 +304,15 @@
 {
     [self loadImagesForOnscreenRows];
 }
+#pragma - 
+#pragma uitableview delegate
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = nil;
+    if([[tableView restorationIdentifier] isEqualToString:kCategoryTableViewRestorationIdentifier]){
+        headerView = [[CategoryInfoView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    }
+    return headerView;
+}
 #pragma -
 #pragma uitableview datasource
 
@@ -316,6 +326,14 @@
     }
     return rowCount;
 
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    CGFloat height = 0;
+    if([[tableView restorationIdentifier] isEqualToString:kCategoryTableViewRestorationIdentifier]){
+        height = 30;
+    }
+    return height;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

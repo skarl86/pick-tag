@@ -11,5 +11,8 @@
 @interface UILabel (PickTag)
 
 +(UILabel *)navigationBarTitle:(NSString *)theTitle;
-
++(UILabel *)tasteCategory;
++(UILabel *)feelCategory;
++(UILabel *)moodCategory;
++(UILabel *)shapeCategory;
 @end
